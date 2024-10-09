@@ -446,6 +446,7 @@ export default {
       axios
         .post(path, payload)
         .then((response) => {
+          console.log(response);
           this.RESTgetAccounts();
           // For message alert
           this.message = "Account Created successfully!";

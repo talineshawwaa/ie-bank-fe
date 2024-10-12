@@ -28,7 +28,7 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm install
-          npm run build:dev ## this command will build the vue.js app using .env.development variables into the dest-div/ folder
+          npm run build:dev ## this command will build the vue.js app using .env.development variables into the dist-dev/ folder
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
@@ -58,4 +58,4 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: ${{ env.FRONTEND_WEBAPP_DEV }}
-          package: .
+          package: dist-dev/  # Corrected the path to the build output directory

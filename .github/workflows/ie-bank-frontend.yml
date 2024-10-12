@@ -60,4 +60,4 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: ${{ env.FRONTEND_WEBAPP_DEV }}
-          package: dist-dev/  # Ensure the deployment step uses the correct build output directory
+          package: .

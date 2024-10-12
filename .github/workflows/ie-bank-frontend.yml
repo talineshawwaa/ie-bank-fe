@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 env:
-  FRONTEND_WEBAPP_DEV: tshawwa-fe-dev
+  FRONTEND_WEBAPP_DEV: talineshawwa-fe-dev
 
 jobs:
   build:

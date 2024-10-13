@@ -29,6 +29,7 @@ jobs:
           npm run build:dev  ## Build the vue.js app using .env.development into dist-dev/ folder
         env:
           NODE_ENV: development  
+          NODE_ENV_UAT: uat
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4

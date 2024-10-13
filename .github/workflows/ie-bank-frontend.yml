@@ -27,9 +27,6 @@ jobs:
         run: |
           npm install
           npm run build:dev  ## Build the vue.js app using .env.development into dist-dev/ folder
-        env:
-          NODE_ENV: development  
-          NODE_ENV_UAT: uat
 
       - name: Upload artifact for deployment job (Development)
         uses: actions/upload-artifact@v4
@@ -85,7 +82,7 @@ jobs:
           path: dist-uat/  
 
   deploy-uat:
-    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    if: github.event_name == 'push' 
     runs-on: ubuntu-latest
     needs: build-uat
     environment:

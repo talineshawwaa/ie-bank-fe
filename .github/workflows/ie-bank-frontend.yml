@@ -75,13 +75,13 @@ jobs:
       - name: npm install, build, and test (UAT)
         run: |
           npm install
-          npm run build:uat ## This will build the Vue.js app using .env.uat into dist-uat/ folder
+          npm run build:uat ## Ensure this builds the Vue.js app using .env.uat into dist-uat/ folder
 
       - name: Upload artifact for deployment job (UAT)
         uses: actions/upload-artifact@v4
         with:
           name: node-app-uat
-          path: dist-uat/
+          path: dist-uat/  
 
   deploy-uat:
     if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'

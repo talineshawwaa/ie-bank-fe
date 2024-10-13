@@ -11,6 +11,7 @@ on:
 
 env:
   FRONTEND_WEBAPP_DEV: talineshawwa-fe-dev
+  FRONTEND_WEBAPP_UAT: talineshawwa-fe-uat
 
 jobs:
   build:

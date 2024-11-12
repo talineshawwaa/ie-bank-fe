@@ -562,6 +562,7 @@ export default {
 
   // Call GET function when component mounted
   mounted() {
+    console.log("VUE_APP_ROOT_URL:", process.env.VUE_APP_ROOT_URL);
     this.RESTgetAccounts();
   },
 };
